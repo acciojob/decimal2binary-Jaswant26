@@ -1,20 +1,16 @@
 function decimalToBinary(decimal) {
-  //Write you code here
-  function decimalToBinary(decimal) {
   if (decimal === 0) {
     return '0';
   }
 
-  let binary = '';
-  while (decimal > 0) {
-    const remainder = decimal % 2;
-    binary = remainder + binary;
-    decimal = Math.floor(decimal / 2);
-  }
-
-  return binary;
+  return decimal.toString(2);
 }
 
-}
+// Example usage:
+const input1 = 7;
+const input2 = 10;
+const input3 = 33;
 
-window.decimalToBinary = decimalToBinary;
+console.log(decimalToBinary(input1)); // Output: 111
+console.log(decimalToBinary(input2)); // Output: 1010
+console.log(decimalToBinary(input3)); // Output: 100001
